@@ -1,0 +1,14 @@
+nodeexpress:
+  image: polaris/micro1
+  ports: 
+  - 3002:3000
+  volumes: 
+  - /c/users/scott/nodemicroservice/src:/src
+  command: --gruntfile /src/Gruntfile.js
+apimanager:
+  image: apim_191
+  ports: 
+  - 9443:9443 
+  - 9763:9763 
+  - 8243:8243 
+  - 8280:8280
